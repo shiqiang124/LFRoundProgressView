@@ -41,7 +41,6 @@ iOS5.0+
 
 
 - [GitHub](http://github.com/shiqiang124)
-- [Email](shiqiang124@gmail.com)
 
 If you use/enjoy `LFRoundProgressView`, let me know!
 
