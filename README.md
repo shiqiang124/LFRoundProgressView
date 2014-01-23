@@ -26,7 +26,7 @@ To use `LFRoundProgressView`:
 
 ```objective-c
 
-self.progressView = [[LFRoundProgressViewView alloc] initWithFrame:CGRectMake(140.0f, 30.0f, 40.0f, 40.0f)];
+self.progressView = [[LFRoundProgressView alloc] initWithFrame:CGRectMake(140.0f, 30.0f, 40.0f, 40.0f)];
 [self.view addSubview:self.progressView];
 ```
 
