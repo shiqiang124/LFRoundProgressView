@@ -52,7 +52,8 @@ static const CGFloat kAnnularLineWith = 4.f;
     
     _percentLabel = [[UILabel alloc] initWithFrame:self.bounds];
     _percentLabel.adjustsFontSizeToFitWidth = NO;
-    _percentLabel.textAlignment = UITextAlignmentCenter;
+//    _percentLabel.textAlignment = UITextAlignmentCenter;
+    _percentLabel.textAlignment = NSTextAlignmentCenter;
     _percentLabel.opaque = NO;
     _percentLabel.backgroundColor = [UIColor clearColor];
     _percentLabel.textColor = _percentLabelTextColor;
