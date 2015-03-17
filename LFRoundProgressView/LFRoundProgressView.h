@@ -34,6 +34,12 @@
 @property (nonatomic, MB_STRONG) UIColor *progressTintColor UI_APPEARANCE_SELECTOR;
 
 /**
+ * Defaults as white [UIColor whiteColor]
+ * NO = annular. progressBackgroundColor is affect.
+ */
+@property (nonatomic, MB_STRONG) UIColor *progressBackgroundColor UI_APPEARANCE_SELECTOR;
+
+/**
  * Indicator background (non-progress) color.
  * Defaults to translucent white (alpha 0.1)
  */
