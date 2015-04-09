@@ -36,8 +36,9 @@ static const CGFloat kAnnularLineWith = 4.f;
     self.backgroundColor = [UIColor clearColor];
     self.opaque = NO;
     _progress = 0.f;
-    _progressTintColor =[[UIColor alloc] initWithWhite:1.f alpha:1.f];
-    _backgroundTintColor =[[UIColor alloc] initWithWhite:1.f alpha:.1f];
+    _progressTintColor = [[UIColor alloc] initWithWhite:1.f alpha:1.f];
+    _progressBackgroundColor = [[UIColor alloc] initWithWhite:1.f alpha:.1f];
+    _backgroundTintColor = [[UIColor alloc] initWithWhite:1.f alpha:.1f];
     
     _percentLabelTextColor =[UIColor whiteColor];
     _percentLabelFont =[UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
@@ -69,6 +70,7 @@ static const CGFloat kAnnularLineWith = 4.f;
 	[self unregisterFromKVO];
 #if !__has_feature(objc_arc)
 	[_progressTintColor release];
+    [_progressBackgroundColor release];
 	[_backgroundTintColor release];
     [_pecentLabel release];
     [_percentLabelFont release];
@@ -127,7 +129,7 @@ static const CGFloat kAnnularLineWith = 4.f;
 		CGFloat radius = (MIN(allRect.size.width,allRect.size.height) - 4) / 2;
 		CGFloat startAngle = - ((float)M_PI / 2); // 90 degrees
 		CGFloat endAngle = (self.progress * 2 * (float)M_PI) + startAngle;
-		CGContextSetRGBFillColor(context, 1.0f, 1.0f, 1.0f, 1.0f); // white
+		CGContextSetFillColorWithColor(context, self.progressBackgroundColor.CGColor);
 		CGContextMoveToPoint(context, center.x, center.y);
 		CGContextAddArc(context, center.x, center.y, radius, startAngle, endAngle, 0);
 		CGContextClosePath(context);
@@ -155,6 +157,7 @@ static const CGFloat kAnnularLineWith = 4.f;
 	return [NSArray arrayWithObjects:
             @"progressTintColor",
             @"backgroundTintColor",
+            @"progressBackgroundColor",
             @"progress",
             @"percentShow",
             @"percentLabelTextColor",
