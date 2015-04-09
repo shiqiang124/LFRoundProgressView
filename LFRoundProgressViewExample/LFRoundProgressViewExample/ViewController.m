@@ -23,18 +23,20 @@
     
     //1.default round
     self.progressView = [[LFRoundProgressView alloc] initWithFrame:CGRectMake(140.0f, 60.0f, 40.0f, 40.0f)];
+    self.progressView.percentShow = NO;
     [self.view addSubview:self.progressView];
     
     //2.annular & LineCapStyle
     self.largeProgressView.annularLineCapStyle = kCGLineCapRound;
     self.largeProgressView.annularLineWith = 4.f;
     self.largeProgressView.percentLabelFont = [UIFont boldSystemFontOfSize:10.f];
-    self.largeProgressView.percentLabelTextColor = [[UIColor alloc] initWithWhite:0.1f alpha:.8f];
+    self.largeProgressView.percentLabelTextColor = [[UIColor alloc] initWithWhite:0.2f alpha:.8f];
     
     
     //3.annular
     self.largestProgressView.annular = NO;
     self.largestProgressView.percentShow = NO;
+    self.largestProgressView.progressBackgroundColor = [[UIColor alloc] initWithWhite:1 alpha:.8];
 
     
     [self startAnimation];
