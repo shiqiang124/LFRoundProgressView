@@ -15,7 +15,7 @@ View the included example project for a demonstration.
 To use `LFRoundProgressView`:
 
 
-#### Cocoapods
+#### CocoaPods
 - Add a pod for  `LFRoundProgressView` to your Podfile `pod 'LFRoundProgressView', '~> 1.0.0`'
 
 #### Source files
